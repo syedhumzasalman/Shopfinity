@@ -13,13 +13,13 @@ const Navbar = () => {
                         <p className="hover:underline">
                             📞 (021) 11-11-Shopfinity (24273)
                         </p>
-                        <p className="hover:underline">
+                        <p className="hover:underline hidden sm:block">
                             ✉️ customercare@Shopfinity.pk
                         </p>
                     </div>
 
                     {/* Right Side: Account & Cart */}
-                    <div className="flex items-center gap-4 mt-2 md:mt-0">
+                    <div className="flex items-center gap-3 mt-2 md:mt-0">
                         <NavLink
                             to="/"
                             className={({ isActive }) =>
@@ -27,6 +27,15 @@ const Navbar = () => {
                             }
                         >
                             Home
+                        </NavLink>
+
+                        <NavLink
+                            to="/AllProducts"
+                            className={({ isActive }) =>
+                                isActive ? "text-blue-500 font-bold" : "text-white-600"
+                            }
+                        >
+                            All Products
                         </NavLink>
 
                         <NavLink
@@ -46,6 +55,7 @@ const Navbar = () => {
                         >
                             Contact Us
                         </NavLink>
+
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ const Header = () => {
         <>
             <div className="relative w-full overflow-hidden">
                 <img
-                    src={images[0]}
+                    src={images[2]}
                     alt="Banner"
                     className="w-full h-auto max-h-[500px] object-contain md:object-cover md:h-[500px]"
                 />
