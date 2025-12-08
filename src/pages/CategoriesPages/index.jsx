@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import BestsellingProductsCard from '../../Components/BestsellingProductsCard'
+import Searchbar from '../../Components/Searchbar'
 
 const CategoriePage = () => {
   const param = useParams()
@@ -33,6 +34,7 @@ const CategoriePage = () => {
 
   return (
     <>
+      <Searchbar />
       <div className="px-4 py-6">
         <h1 className="text-2xl font-bold text-gray-800 mb-6">
           Showing results for <span className="text-teal-600">"{param.categoryName}"</span>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Searchbar = () => {
 
@@ -8,9 +9,11 @@ const Searchbar = () => {
 
     const [searchInput, setSearchInput] = useState("")
 
+    const { addtocard } = useSelector((store) => store.productReducer)
+    // console.log(addtocard);
+
+
     // console.log(searchInput);
-
-
 
 
     return (
@@ -51,9 +54,16 @@ const Searchbar = () => {
                     </div>
 
                     {/* Tagline */}
-                    <div className="text-lg font-semibold text-teal-700 whitespace-nowrap">
+                    {/* <div className="text-lg font-semibold text-teal-700 whitespace-nowrap">
                         Wholesale <span className="text-orange-500">Prices</span> Rozana
+                    </div> */}
+
+                    <div className="text-lg font-semibold text-teal-700 whitespace-nowrap">
+                        <Link to="/add-to-card">
+                             🛒 Add to Card<span className="text-orange-500"> {addtocard.length} </span>
+                        </Link>
                     </div>
+
                 </div>
             </div>
 

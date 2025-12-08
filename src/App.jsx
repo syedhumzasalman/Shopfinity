@@ -10,6 +10,7 @@ import NotFound from './pages/NotFound/Index'
 import ProductsDetails from './pages/ProductsDetails'
 import CategoriePage from './pages/CategoriesPages'
 import SearchCategorie from './pages/SearchCategorie'
+import AddtoCard from './pages/AddtoCard/AddtoCard'
 
 function App() {
 
@@ -22,11 +23,12 @@ function App() {
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/AllProducts" element={<AllProducts />} />
         <Route path="/Search/:query" element={<SearchCategorie />} />
-        <Route path="/AllProducts/:id"  element={<ProductsDetails />} />
-        <Route path="/categorie/:categoryName"  element={<CategoriePage />} />
+        <Route path="/AllProducts/:id" element={<ProductsDetails />} />
+        <Route path="/categorie/:categoryName" element={<CategoriePage />} />
+        <Route path="/add-to-card" element={<AddtoCard />} />
 
 
-        <Route path="*" element={<NotFound/>}/>
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
 

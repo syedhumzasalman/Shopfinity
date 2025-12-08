@@ -1,19 +1,23 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { addtoCard } from "../../Redux/Slices/ProductSlice";
 
 const BestsellingProductsCard = ({ product }) => {
 
-    const { id , title, price, image, category, description, rating } = product;
+    const { id, title, price, image, category, description, rating } = product;
 
     // console.log(image);
 
     const rate = rating?.rate || 'No rating available';
     const count = rating?.count || 'No rating available';
 
+    const dispatch = useDispatch()
+
     return (
         <>
-            <Link to={`/AllProducts/${id}`}>
-                <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm mx-auto bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-4 sm:p-5 border border-gray-100">
+            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm mx-auto bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-4 sm:p-5 border border-gray-100">
+                <Link to={`/AllProducts/${id}`}>
                     <div className="flex justify-center">
                         <img
                             src={image}
@@ -43,8 +47,22 @@ const BestsellingProductsCard = ({ product }) => {
                             <span className="text-gray-500">({count})</span>
                         </span>
                     </div>
-                </div>
-            </Link>
+                </Link>
+                <button
+                    onClick={() => dispatch(addtoCard(product))}
+                    className="
+                   w-full mt-4
+                   bg-green-600 hover:bg-green-700 
+                   text-white font-semibold
+                   py-2.5 rounded-xl
+                   shadow-md hover:shadow-lg
+                   transition-all duration-300
+                   flex items-center justify-center gap-2
+    "
+                >
+                    🛒 Add to Cart
+                </button>
+            </div>
 
 
         </>

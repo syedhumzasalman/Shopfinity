@@ -12,7 +12,7 @@ const TopCategories = () => {
     ];
 
     const images = [
-      "https://www.gulahmedshop.com/media/wysiwyg/2025/03_category_icons/00_sale/05-12/mens_unstitched.jpg",
+      "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTYYSK7JekthJYEJo7zHU8Tochlqc8RiapZQ&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOGpjLP9sAzw3vDeUmhx7CQZxJAn1wUmxLhw&s",
       "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png",

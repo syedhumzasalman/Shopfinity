@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import BestsellingProductsCard from '../../Components/BestsellingProductsCard'
+import Searchbar from '../../Components/Searchbar'
 
 const SearchCategorie = () => {
 
@@ -45,6 +46,7 @@ const SearchCategorie = () => {
 
     return (
         <>
+            <Searchbar />
 
             <div className="px-4 py-6">
                 <h1 className="text-2xl font-bold text-gray-800 mb-6">
